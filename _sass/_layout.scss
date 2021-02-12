@@ -136,19 +136,24 @@ header {
 
 // FOOTER.HTML
 .lang-options {
-margin-top: 20px;
-margin-bottom: 20px;
-margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 
-ul {
-    list-style: none;
+    ul {
+        list-style: none;
 
-    li {
-        display: inline; /*display the elements on one line*/
-        margin-left: 10px;
+        li {
+            display: inline; /*display the elements on one line*/
+            margin-left: 10px;
+        }
     }
 }
+
+.contact-col {
+    text-align:center;
 }
+
 
 /*
 *     PAGE.HTML
@@ -163,4 +168,10 @@ ul {
 .page-content-container hr {
     width: 80vw;
     margin: auto;
+}
+
+.page-content-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
 }

@@ -4,7 +4,6 @@ noPageTitle: true
 lang: en
 lang-ref: index
 ---
-
 <p>
     The Multi User Domain project is an early-development open-source platform for creating Multi User Domains.
     Building on semantic web standards users <a href="https://inrupt.com/solid/">store their own data</a>, taking their characters and items with them as they travel between different "worlds"; servers created by a community to store shared physical world, like towns and places.
@@ -17,13 +16,13 @@ lang-ref: index
     We separate the concerns between the storage of objects in our worlds (in RDF) and the description of them, by writing generic Content Server endpoints which can receive requests like "describe this object for me".
     My Content Server can analyse the class, object and properties it can find for things which it understands, and return text content to the user describing it.
     As a very simple example I can analyse a Stadium and reply "it's quiet" or "it's noisy" dependening on whether there is an event on.
-    By returning the content in RDF, too, we can separate input stimulus like `mudcontent:sees`, `mudcontent:hears` and decorate it with `mudcontent:because`.
-    The client can then understand to an extent the content it is being given, the _quality_ of it (specificity for the user) and even pipe the content to other servers to build on it and find something better
+    By returning _this_ in RDF, too, we can separate input stimulus like `mudcontent:sees` and `mudcontent:hears`, and decorate it with `mudcontent:because`.
+    The client can then understand to an extent the content it is being given, and reason what to display based on the _quality_ of it (specificity for the user) and its relevance. It can even pipe the content to other servers to build on it and find something better
 </p>
 <p>
     RDF data on the semantic web is open by design, making it highly extendible. There is a lot of fun to be had in the building of a world, even without any "text-based adventure", simply by creating a village, coming back in 6 months to find that your village is now a city, or that the bartender at the saloon you visited last week is complaining about another player who came in and challenged them to a duel.
     Your world server doesn't have to define what a duel is, what a saloon is or what a Memory is, it just needs to allow players and machines to write to it in RDF.
-    It doesn't have to redefine how to describe what's happening because this concern has been separated for content server providers.
+    It doesn't have to redefine how to describe what's happening because this concern has been separated to the content server providers.
 </p>
 <p>
     The project is in incredibly early development, we basically have the very limited content description example "there is an event on at the stadium" used before. It's open-source and the quality of the game will depend entirely on the health of a community, so if you're interested to get involved in any capaciy then please get in touch.
