@@ -78,7 +78,7 @@ header {
     //background-position: center;
     padding: 0px 15px;
     text-align: center;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,8 +92,8 @@ header {
 }
 
 .main-header {
-    color: $light;
-    text-shadow: 4px 4px 2px black;
+    color: $heading-font-color;
+    //text-shadow: 4px 4px 2px black;
     font-family: $main-heading-font;
     font-size: 64px;
 }
@@ -103,7 +103,7 @@ header {
 }
 
 .nav-item a {
-    color: $light;
+    color: $heading-font-color;
     font-family: $main-heading-font;
     //text-shadow: 3px 3px 2px black;
     font-size: 24px;
@@ -117,7 +117,7 @@ header {
 //font-size can cause display issues with smaller width devices
 @media screen and (min-width: 300px) and (max-width: 462px) {
 .main-header {
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .nav-item a {

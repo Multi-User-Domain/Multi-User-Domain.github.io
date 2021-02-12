@@ -6,7 +6,7 @@ $lighter-font-color: #4a4848;
 $link-color: #60e343;
 $link-hover-color: #aaff13;
 $link-visited-color: #57b044;
-$navbar-hover-color: #E7EDF4;
+$navbar-hover-color: $link-hover-color;
 $main-heading-font: $font-style;
 $heading-font: $font-style;
 $heading-font-color:$font-color;
