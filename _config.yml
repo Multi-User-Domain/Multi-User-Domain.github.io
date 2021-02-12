@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Multi User Domain
-# email: your-email@example.com
+email: c.mackervoy@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The front-end site of the Multi-User Domain project, a platform for creating linked-data virtual worlds
 baseurl: "" # the subpath of your site, e.g. /blog
