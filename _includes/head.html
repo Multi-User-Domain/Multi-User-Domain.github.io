@@ -8,7 +8,7 @@
     <!-- link to CSS doc-->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
     {% if page.layout != 'index' %}
         {% assign posts=site.posts | where:"lang-ref", page.lang-ref | sort: 'lang' %}
         {% if posts.size == 0 %}

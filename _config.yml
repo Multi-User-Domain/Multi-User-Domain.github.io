@@ -35,12 +35,19 @@ kramdown:
 collections:
   posts:
     output: true
+  docs:
+    output: true
 plugins:
   - jekyll-feed
 
 defaults:
   - scope:
-      path: ""
+      path: "docs"
+      type: "docs"
+    values:
+      layout: "doc"
+  - scope:
+      path: "blog"
       type: "posts"
     values:
       layout: "post"
