@@ -17,4 +17,3 @@ A World Server is responsible for the shared data storage and is the source of T
 # Future Developments - Notes For Contributors
 
 * Supporting an intelligent data store and CMS is effort we might not need to make. There is an [open issue](https://github.com/Multi-User-Domain/mud-jena/issues/32) about using Neo4J's graph storage via [neosemantics](https://neo4j.com/labs/neosemantics/), and about using AtomGraph's [LinkedDataHub](https://atomgraph.github.io/LinkedDataHub/), a triplestore using Tomcat and Jena (like MUD-Jena).
-* I'm also considering starting up a Python library which would use [RDFLib](https://rdflib.readthedocs.io/en/stable/) and/or [DjangoLDP](https://git.startinblox.com/djangoldp-packages/djangoldp).
