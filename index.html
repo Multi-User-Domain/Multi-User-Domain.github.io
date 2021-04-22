@@ -9,26 +9,18 @@ lang-ref: index
     Building on semantic web standards users <a href="https://inrupt.com/solid/">store their own data</a>, taking their characters and items with them as they travel between different "worlds"; servers created by a community to store shared physical world, like towns and places.
 </p>
 <p>
-    All resources (Characters, Buildings, Memories) are stored in RDF Graphs, a form of graph storage which uses URIs to uniquely identify all objects, classes (types) and properties. For example my character may be stored at `http://example.com/characters/alice/`, the RDF definition of what a character is being found at `http://example.com/vocabulary/#character`.
-    By describing our world in this way we can share definitions between worlds and start building this "infinite" expanse of interoperable worlds for characters to travel between
-</p>
-<p>
-    We separate the concerns between the storage of objects in our worlds (in RDF) and the experience of them, by writing generic Content Server endpoints which can receive requests like "describe this object for me".
-    My Content Server can analyse the class, object and properties it can find for things which it understands, and return text content to the user describing it.
-    As a very simple example I can analyse a Stadium and reply "it's quiet" or "it's noisy" dependening on whether there is an event on.
-    By returning _this_ in RDF, too, we can separate input stimulus like `mudcontent:sees` and `mudcontent:hears`, and decorate it with `mudcontent:because`.
-    The client can then understand to an extent the content it is being given, and reason what to display based on the _quality_ of it (specificity for the user) and its relevance. It can even pipe the content to other servers to build on it and find something better
-</p>
-<p>
-    RDF data on the semantic web is open by design, making it highly extensible. There is a lot of fun to be had in the building of a world, even without any "text-based adventure", simply by creating a village, coming back in 6 months to find that your village is now a city, or that the bartender at the saloon you visited last week is complaining about another player who came in and challenged them to a duel.
+    The semantic web is open by design, making it highly extensible. There is a lot of fun to be had in the building of a world, even without any "text-based adventure", simply by creating a village, coming back in 6 months to find that your village is now a city, or that the bartender at the saloon you visited last week is complaining about another player who came in and challenged them to a duel.
     Your world server doesn't have to define what a duel is, what a saloon is or what a memory is, it just needs to allow players and machines to write to it in RDF.
     It doesn't have to redefine how to describe what's happening because this concern has been separated to the content server providers.
 </p>
+<!--<p>
+    If you don't know what the semantic web, or what RDF is, then <a href="">this blog post</a> is a good place to start. If you do understand RDF data but you want to know about the project's origins and what it means in the application of game design, then read that post too :-)
+</p>-->
 <p>
-    The project is in incredibly early development, we basically have the very limited content description example "there is an event on at the stadium" used before. It's open-source and the quality of the game will depend entirely on the health of a community, so if you're interested to get involved in any capacity then please get in touch.
+    The project is in early development but we want people to get involved. To understand more please start at the <a href="{{ 'docs/01-overview' | relative_url }}">high-level overview</a> to see how it works. <!--Afterwards, if we've piqued your interest, then please <a href="">get in touch</a>.-->
 </p>
 <p>
-    The components of the platform are as follows:
+    The MUD is open-source and currently made up of the following sub-projects:
 </p>
 
 <h2>The Vocabularies</h2>
