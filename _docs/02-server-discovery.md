@@ -56,6 +56,8 @@ A MUD server configuration with all of the keys expressed in this document, opti
 
 ```turtle
 @prefix mud: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mud.ttl#>.
+@prefix mudcontent: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudcontent.ttl#>.
+@prefix mudlogic: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudlogic.ttl#>.
 
 :configuration a mud:Configuration ;
     mud:worldEndpoint <http://localhost:8080/mud/world/> ;
