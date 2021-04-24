@@ -39,8 +39,8 @@ Supporting a World Server is not required and if absent, the Client SHOULD assum
 Supporting Content Server functionality is not required.
 
 A MUD Provider which supports [Content Server]({{ 'docs/04-content-server' | relative_url }}) functionality MUST provide one or more of the following endpoint properties for the Content Server:
-* `mudcontent:SceneDescriptionEndpoint`
-* `mudcontent:SimpleObjectDescriptionEndpoint`
+* `mudcontent:sceneDescriptionEndpoint`
+* `mudcontent:simpleObjectDescriptionEndpoint`
 
 The value of these properties MUST be a URL pointing to the location of the respective endpoints, which MUST behave as stated in the relevant parts of the Content Server specification.
 
@@ -48,7 +48,7 @@ The value of these properties MUST be a URL pointing to the location of the resp
 
 Supporting Action Server functionality is not required.
 
-A MUD Provider which supports [Action Server]({{ 'docs/05-action-server' | relative_url }}) functionality MUST provide an `mudlogic:ActionDiscoveryEndpoint` property. The value of this property MUST be a URL pointing to the location of the endpoint, and it MUST behave as stated in the relevant parts of the Action Server specification.
+A MUD Provider which supports [Action Server]({{ 'docs/05-action-server' | relative_url }}) functionality MUST provide an `mudlogic:actionDiscoveryEndpoint` property. The value of this property MUST be a URL pointing to the location of the endpoint, and it MUST behave as stated in the relevant parts of the Action Server specification.
 
 ### Example Configuration
 
@@ -61,9 +61,9 @@ A MUD server configuration with all of the keys expressed in this document, opti
 
 :configuration a mud:Configuration ;
     mud:worldEndpoint <http://localhost:8080/mud/world/> ;
-    mudcontent:SceneDescriptionEndpoint <http://localhost:8080/mud/content/> ;
-    mudcontent:SimpleObjectDescriptionEndpoint <http://localhost:8080/mud/content/> ;
-    mudlogic:ActionDiscoveryEndpoint <http://localhost:8000/mud/act/discover/> .
+    mudcontent:sceneDescriptionEndpoint <http://localhost:8080/mud/content/> ;
+    mudcontent:simpleObjectDescriptionEndpoint <http://localhost:8080/mud/content/> ;
+    mudlogic:actionDiscoveryEndpoint <http://localhost:8000/mud/act/discover/> .
 ```
 
 ### Notes for Contibutors
