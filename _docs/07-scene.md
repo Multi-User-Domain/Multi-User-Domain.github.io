@@ -12,6 +12,8 @@ A Scene refers to a graph containing models pertaining to resources within a use
 
 Both Action and Content server provide features using scenes - the Content Server might describe it and the Action Server might analyse it to find available actions.
 
+# Implementation
+
 ## Scene Generation
 
 A simple client can POST a scene description by dumping the characters and objects which it knows to be present - and this is valid - but the client MAY also seek to "develop" the scene beforehand, for example by making a call to a Scene Generation endpoint which integrates.
@@ -25,3 +27,9 @@ If the server supports scene generation, then it SHOULD return a `mud:sceneGener
 The contents of the Scene SHOULD include the objects which were passed by the client in the request, and any physical world objects which have been injected, for example a generated character whom the player could talk to.
 
 TODO: The Scene MAY also include contextual, non-physical objects including social context and abstract information.
+
+# Notes
+
+The server MAY incur side-effects to World state during the scene generation if it chooses - for example triggering an event.
+
+A client MAY or MAY NOT confirm the perspective and show it to the player. The act of calling the Scene generation endpoint SHOULD NOT be considered in the server to meaning that the player is committed to the scene. 
