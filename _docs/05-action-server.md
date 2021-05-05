@@ -22,7 +22,7 @@ The `POST` operation MUST accept the `taskUri` as a query parameter (pointing to
 
 The `GET` operation MUST accept the `taskUri` as a query parameter (this time pointing to the created task resource itself). The Client MAY NOT have sent a task which is stored on, or was created by the Action Server itself. During this operation the Action Server MAY complete any serverside checks on the action (e.g. if a Task been completed), but it MUST return `200` with the Requested Action resource, or an error. If the task is returned completed, then the Action Server SHOULD effect any changes to local datastores (if it is also a World Server, for example), and the Client SHOULD effect the changes to other data stores. The reasons for this [are outlined in this open issue about trust](https://github.com/Multi-User-Domain/Multi-User-Domain.github.io/issues/2).
 
-The Action Server MUST advertise the endpoint through the [MUD Discovery]({{ 'docs/11-server-discovery' | relative_url }}) mechanism.
+The Action Server MUST advertise the endpoint through the [MUD Discovery]({{ 'docs/02-server-discovery' | relative_url }}) mechanism.
 
 ## Features
 
