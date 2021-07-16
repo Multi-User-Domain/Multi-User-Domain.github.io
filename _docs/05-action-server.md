@@ -12,7 +12,23 @@ An Action Server is a resource which exposes views to make actions on a World Se
 
 # Discovery
 
-TODO: currently in development. During Action Discovery, the client will discover the ways in which it can interact with a given graph via the providing Action Server. For example, I might give it a location, and it might return a Transit Activity endpoint for me to use.
+During Action Discovery, the client will discover the ways in which it can interact with a given graph via the providing Action Server. For example, I might give it a location, and it might return a Transit Activity endpoint for me to use.
+
+Just like in [Content Discovery]({{ 'docs/04-content-server' | relative_url }}), the client MUST generate a Scene, and then they will send this in a POST request to the `mudlogic:ActionDiscoveryEndpoint` returned by the server during the [Server Discovery]({{ 'docs/02-server-discovery' | relative_url }}) phase.
+
+Upon the reception of the Scene, the Action Server SHOULD parse it for objects, to understand the actions that it can offer. The endpoint MUST return a graph of available actions to the client in at least Turtle format, and it SHOULD serialize each action for the client's use. It MUST serialize the type of the action, and the `mudlogic:actAt` property e.g.
+
+```
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mudlogic: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudlogic.ttl#> .
+
+<https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudlogic.ttl#Transit>
+        a       <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudlogic.ttl#Task> ;
+        rdfs:label "Transit Task"@en ;
+        mudlogic:actAt <http://localhost:8080/mud/act/task/> .
+```
+
+TODO: the client must currently implicitly support the action to be able to POST to this endpoint. Using Shapes, we would be able to return the input requirements of the endpoint, and the client will be able to do this on-the-fly, even without having seen this action before! (see [Git issue](https://github.com/Multi-User-Domain/mud-jena/issues/44)).
 
 # Acting
 
