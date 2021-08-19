@@ -14,7 +14,7 @@ Evidently the first problem that the two will face, then, will be saying hello.
 
 More specifically, we need the server to explain to the client what features it supports and where it can find the endpoints for these features. This isn't a new problem, and actually in another domain it's already been solved by the [Open ID Connect Discovery specification](https://openid.net/specs/openid-connect-discovery-1_0.html).
 
-Very roughly, there is one standard endpoint (`/.well-known/openid-configuration/`), at which the server (the identity provider) returns a JSON document describing the features it supports and where to find them.
+Very roughly, there is one standard endpoint (`./well-known/openid-configuration/`), at which the server (the identity provider) returns a JSON document describing the features it supports and where to find them.
 
 # Definition of terms
 
@@ -22,7 +22,7 @@ Very roughly, there is one standard endpoint (`/.well-known/openid-configuration
 
 # MUD Configuration endpoint
 
-The MUD is in very early development and we're designing it as we need it. Imaginatively, we're going to use `/.well-known/mud-configuration/` as our standard endpoint for a MUD Provider.
+The MUD is in very early development and we're designing it as we need it. Imaginatively, we're going to use `./well-known/mud-configuration/` as our standard endpoint for a MUD Provider.
 
 A MUD Provider which provides this endpoint MUST return a graph of `rdf:type` `mud:Configuration`, with at minimum the keys defined in the sections below. The format of this document should be in RDF depending on the request of the client and the support of the server. As a minimum, MUD Providers MUST support Turtle serialization of this document.
 
@@ -55,6 +55,7 @@ A MUD Provider which supports [Action Server]({{ 'docs/05-action-server' | relat
 A MUD server configuration with all of the keys expressed in this document, optional or required:
 
 ```turtle
+@prefix : <#>.
 @prefix mud: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mud.ttl#>.
 @prefix mudcontent: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudcontent.ttl#>.
 @prefix mudlogic: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudlogic.ttl#>.
