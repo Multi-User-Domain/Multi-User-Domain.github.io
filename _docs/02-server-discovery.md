@@ -55,6 +55,7 @@ A MUD Provider which supports [Action Server]({{ 'docs/05-action-server' | relat
 A MUD server configuration with all of the keys expressed in this document, optional or required:
 
 ```turtle
+@prefix : <#>.
 @prefix mud: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mud.ttl#>.
 @prefix mudcontent: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudcontent.ttl#>.
 @prefix mudlogic: <https://raw.githubusercontent.com/Multi-User-Domain/vocab/main/mudlogic.ttl#>.
