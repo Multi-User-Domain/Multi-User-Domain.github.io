@@ -29,7 +29,7 @@ github_username:  Multi-User-Domain
 # Build settings
 sass:
   sass_dir: _sass
-include: []
+include: ['_pages']
 kramdown:
   input: GFM
 collections:
