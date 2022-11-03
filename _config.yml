@@ -37,6 +37,8 @@ collections:
     output: true
   docs:
     output: true
+  guides:
+    output: true
 plugins:
   - jekyll-feed
 
@@ -55,6 +57,11 @@ defaults:
       path: ""
     values:
       layout: "page"
+  - scope:
+      path: "guides"
+      type: "guides"
+    values:
+      layout: "doc"
 
 languages:
 en:
