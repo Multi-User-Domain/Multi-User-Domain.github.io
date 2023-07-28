@@ -4,46 +4,31 @@ noPageTitle: true
 lang: en
 lang-ref: index
 ---
-<p>
-    The Multi User Domain project is an early-development open-source platform for creating Multi User Domains.
-    Building on semantic web standards users <a href="https://inrupt.com/solid/">store their own data</a>, taking their characters and items with them as they travel between different "worlds"; servers created by a community to store shared physical world, like towns and places.
-</p>
-<p>
-    The semantic web is open by design, making it highly extensible. There is a lot of fun to be had in the building of a world, even without any "text-based adventure", simply by creating a village, coming back in 6 months to find that your village is now a city, or that the bartender at the saloon you visited last week is complaining about another player who came in and challenged them to a duel.
-    Your world server doesn't have to define what a duel is, what a saloon is or what a memory is, it just needs to allow players and machines to write to it in RDF.
-    It doesn't have to redefine how to describe what's happening because this concern has been separated to the content server providers.
-</p>
-<!--<p>
-    If you don't know what the semantic web, or what RDF is, then <a href="">this blog post</a> is a good place to start. If you do understand RDF data but you want to know about the project's origins and what it means in the application of game design, then read that post too :-)
-</p>-->
-<p>
-    The project is in early development but we want people to get involved. To understand more please start at the <a href="{{ 'docs/01-overview' | relative_url }}">high-level overview</a> to see how it works. <!--Afterwards, if we've piqued your interest, then please <a href="">get in touch</a>.-->
-</p>
-<p>
-    The MUD is open-source and currently made up of the following sub-projects:
-</p>
 
-<h2>The Vocabularies</h2>
-<p>
-    The vocularies are OWL/RDF documents served in Turtle format to describe all of the data models being used to build the world, content and logic in the MUD.
-    All in draft status and so subject to a high degree of change for the time being
-</p>
-<p>
-    Accessible at <a href="https://github.com/Multi-User-Domain/vocab">https://github.com/Multi-User-Domain/vocab</a>
-</p>
+<p>The Commons is property that opens itself up to use by anyone, and which is owned and managed by the people who use it... So what would that mean when talking about game development?</p>
 
-<h2>React - The Client</h2>
-<p>
-    Currently this repository defines all of the React extensions for helping to interface with the MUD vocabularies and for building a client-side app to interface with MUD servers. It also implements a specific client for interfacing with them, which when the repository is more mature will be separated from this repository (<a href="https://github.com/Multi-User-Domain/mud-react/issues/2">https://github.com/Multi-User-Domain/mud-react/issues/2</a>).
-</p>
-<p>
-    Accessible at <a href="https://github.com/Multi-User-Domain/mud-react">https://github.com/Multi-User-Domain/mud-react</a>
-</p>
+<p>In the increasingly enclosed world the pay-wall, pay-to-play, pay-to-win, and even the pay-to-not-grind we nonetheless have thriving scenes of modders, game jammers, hackers, indie game developers and collective action of every stripe. In this context we hope to convince you that there is the potential in building a Games Commons, which is like Wikipedia but for game content.</p>
 
-<h2>Java & Apache Jena - The Server(s)</h2>
-<p>
-    The repository for all things World Server, Content Server and Action Server.
-</p>
-<p>
-    Accessible at <a href="https://github.com/Multi-User-Domain/mud-jena">https://github.com/Multi-User-Domain/mud-jena</a>
-</p>
+<p>The Games Commons is in early development, it's non-commercial but unfinanced, and is currently made up of a collection of smaller games and demonstrations, building towards open standards of interoperable game content. The best way to show you this is to show you what we've made together. Below then is a tour of what we've been up to.</p>
+
+<h4>Realm</h4>
+
+<img src="{{ '/assets/img/pages/index/realm.png' | absolute_url }}" class="blog-full-image" alt="A screenshot of Realm, mid-combat with a variety of monsters and attacks in play" />
+
+<p>In May 2023 we took part in the Games Transformed game jam and produced <a href="https://calum.mackervoy.com/en/2023/05/26/games-transformed.html">Realm</a>, a game in which players submit their own cards, which can then be injected into an auto-chess cycle played by two players. The cards can have interesting side effects depending on the actions configured on them, ranging from conventional attacks to changing the world around them, e.g. eating nearby villagers, spawning zombies, or building a castle.</p>
+
+<img src="{{ '/assets/img/pages/index/card-generator.png' | absolute_url }}" class="blog-full-image" alt="A screenshot of the card creation process for the game Realm" />
+
+<p>We created a live card creator for the jam, which we're working on making into a generic application to edit-anything Linked Data dynamically, to be used in live games.</p>
+
+<h4>Utopian Dialogue</h4>
+
+<img src="{{ '/assets/img/pages/index/utopian_dialogue.png' | absolute_url }}" class="blog-full-image" alt="A screenshot of two characters in animated dialogue, alongside a sample of the code which defines the text, animation and character portraits being shown" />
+
+<p>Originally a text adventure game set in a world of collective amnesia, <a href="https://frabjous-seahorse-efd12c.netlify.app/">Utopian Dialogue</a> has evolved into a <a href="https://calum.mackervoy.com/en/2022/08/26/ud-engine.html">generic engine for animating branching narratives written in Ink</a>, and is being expanded to support stories where the characters and worlds are injected according to the world the player is in, to create a sort of engine for running wandering, generative narratives.</p>
+
+<h4>Demonstrations</h4>
+
+<img src="{{ '/assets/img/pages/index/vampiric_bite.gif' | absolute_url }}" class="blog-full-image" alt="Video GIF of demo gameplay. In a 2D city-building game using cards, a card is played on one of the characters in the village, called 'Vampiric Bite'. After being played the character is transformed into a vampire." />
+
+<p>In this demonstration of April 2023, the player uses a card "Vampiric Bite" to change a character into a vampire. The game in the demonstration wasn't built to know what a vampire is, it's following a protocol that allows it to support generic features.</p>
